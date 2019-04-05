@@ -6,14 +6,14 @@ require_once(__DIR__.'/autoload.php');
 
 /**
  * ImageWorkshopTest class
- * 
+ *
  * Tests ImageWorkshop class
- * 
+ *
  * @link http://phpimageworkshop.com
  * @author Sybio (Clément Guillemain  / @Sybio01)
  * @license http://en.wikipedia.org/wiki/MIT_License
  * @copyright Clément Guillemain
- * 
+ *
  */
 class ImageWorkshopTest extends \PHPUnit_Framework_TestCase
 {
@@ -57,7 +57,7 @@ class ImageWorkshopTest extends \PHPUnit_Framework_TestCase
 
         // test 4
         
-        $this->setExpectedException('PHPImageWorkshop\Exception\ImageWorkshopException', '', ImageWorkshop::ERROR_IMAGE_NOT_FOUND);
+        $this->setExpectedException('PHPImageWorkshop\Exception\ImageWorkshopException', 'File "fakePath" not exists.', ImageWorkshop::ERROR_IMAGE_NOT_FOUND);
         $layer = ImageWorkshop::initFromPath('fakePath');
     }
     
